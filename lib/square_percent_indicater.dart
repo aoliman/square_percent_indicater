@@ -167,7 +167,7 @@ class RadialPainter extends CustomPainter {
   }
 }
 
-enum StartAngle { topRight, topLeft, bottomRight, bottomLeft }
+enum StartAngle { topRight, topLeft, bottomRight, bottomLeft, bottomCenter}
 
 extension GetValue on StartAngle {
   double get value => getRotationAngle;
@@ -182,6 +182,8 @@ extension GetValue on StartAngle {
         return pi * 1.0;
       case StartAngle.bottomLeft:
         return pi * 1.5;
+        case StartAngle.bottomCenter:
+          return pi * 1.25;
       default:
         return 0;
     }
